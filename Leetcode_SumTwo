@@ -1,0 +1,34 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//Two sum
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (nums[i] + nums[j] == target) {
+                    //cout<<target;
+                     cout<<i<<" "<<j;
+                    return {i, j};
+                }
+            }
+        }
+        return {}; // No solution found
+    }
+};
+
+int main() {
+    // Write C++ code here
+    //std::cout << "Hello world!";
+    vector<int> vector1 = {1, 2, 3, 4, 5};
+    Solution solution;
+    solution.twoSum(vector1,6);
+   
+    return 0;
+}
