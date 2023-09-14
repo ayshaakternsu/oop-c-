@@ -8,20 +8,22 @@ class Uni
 public:
     string uniName = "North South";
 
+//method
     void check()
     {
         cout << "Yes,It's a method! 1st Base Class\n";
     }
+//constractors
     Uni()
     {
         cout << "\nHello from Constructor\n";
     }
-
+//Destructors
     ~Uni()
     {
         cout << "\nDestructor executed\n";
     }
-
+//method overridding
     string name(string n)
     {
         return n;
@@ -41,20 +43,26 @@ public:
 };
 
 // Derived class
+//multiple inherientance
 class Student : public Uni, public MyOtherClass_Session
 {
 public:
     string myName = name("Aysha");
 };
 
+//access modifiers
+//single inherientance
 class Teacher : public Uni
 {
 private:
     string salary;
+//Data Hiding
+//getter-setter
 
 public:
     string nameT = name("Razia Pal");
 
+//function overloading
     int age(int age)
     {
         return age;
@@ -76,6 +84,8 @@ public:
 };
 
 // Base class
+    // Abstract Class 
+
 class TotalFee
 {
 public:
